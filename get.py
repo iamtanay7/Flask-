@@ -1,6 +1,6 @@
 from flask import Flask,jsonify,request,render_template
 import json
-import os
+import os, requests
 
 app = Flask(__name__)
 
@@ -31,6 +31,7 @@ def test3():
     languages.append(temp)
     return jsonify({'languages':languages})
 
+
 if(__name__=='__main__'):
-      app.run(host='', port=80, debug=True)
+      app.run(host='0.0.0.0', port=80, debug=True)
 
